@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# Dynamic Form Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web application for generating real-time, styled, and validated forms from JSON schemas. Designed with responsiveness, proper validation, and error handling.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
+- Real-time JSON schema-based form generation.
+- Syntax highlighting and JSON validation.
+- Responsive layout with Tailwind CSS.
+- Validation for form fields using React Hook Form and Zod.
+- Mobile-first design for better usability on small screens.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 📂 Folder Structure
+```plaintext
+src/
+├── components/          # Reusable components like FormPreview
+├── hooks/               # Custom React hooks
+├── utils/               # Utility functions like JSON validation
+├── App.tsx              # Main application file
+├── index.tsx            # React entry point
+├── App.css              # Styling file (Tailwind CSS configured)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+📖 Example JSON Schema
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+{
+  "formTitle": "Project Requirements Survey",
+  "formDescription": "Please fill out this survey about your project needs",
+  "fields": [
+    {
+      "id": "name",
+      "type": "text",
+      "label": "Full Name",
+      "required": true,
+      "placeholder": "Enter your full name"
+    },
+    {
+      "id": "email",
+      "type": "email",
+      "label": "Email Address",
+      "required": true,
+      "placeholder": "you@example.com",
+      "validation": {
+        "pattern": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$",
+        "message": "Please enter a valid email address"
+      }
+    },
+    {
+      "id": "comments",
+      "type": "textarea",
+      "label": "Additional Comments",
+      "required": false,
+      "placeholder": "Any other details you'd like to share..."
+    }
+  ]
+}
