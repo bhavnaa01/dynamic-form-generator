@@ -9,8 +9,6 @@
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.119",
     "@types/react-dom": "^18.3.1",
-    "jsonlint": "^1.6.3",
-    "jsonlint-mod": "^1.7.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.53.2",
@@ -49,5 +47,10 @@
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15"
-  }
+  },
+  "description": "A web application for generating real-time, styled, and validated forms from JSON schemas. Designed with responsiveness, proper validation, and error handling.",
+  "main": "tailwind.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
